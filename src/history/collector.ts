@@ -17,7 +17,7 @@ async function collectMetrics(): Promise<void> {
     ]);
 
     metricStore.recordCpu(load.currentLoad);
-    metricStore.recordMemory((mem.used / mem.total) * 100);
+    metricStore.recordMemory(((mem.total - mem.available) / mem.total) * 100);
   } catch (error) {
     logger.error('Error collecting metrics', error);
   }

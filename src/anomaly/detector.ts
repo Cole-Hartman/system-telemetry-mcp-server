@@ -71,8 +71,8 @@ export async function checkSystemAnomalies(): Promise<AnomalyAlert[]> {
     addAlert(alert);
   }
 
-  // Check memory usage
-  const memUsagePercent = (mem.used / mem.total) * 100;
+  // Check memory usage (use available, not used, for accurate macOS memory pressure)
+  const memUsagePercent = ((mem.total - mem.available) / mem.total) * 100;
   const memRule = defaultRules.find((r) => r.type === 'memory_usage')!;
   const memResult = checkThreshold(memUsagePercent, memRule);
   if (memResult.triggered && memResult.severity) {

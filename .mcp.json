@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "system-resources": {
+      "command": "node",
+      "args": ["build/index.js"]
+    }
+  }
+}

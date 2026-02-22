@@ -17,7 +17,7 @@ export async function getMemoryUsage(): Promise<MemoryUsage> {
     free: mem.free,
     active: mem.active,
     available: mem.available,
-    usedPercent: (mem.used / mem.total) * 100,
+    usedPercent: ((mem.total - mem.available) / mem.total) * 100,
     swap: {
       total: mem.swaptotal,
       used: mem.swapused,
