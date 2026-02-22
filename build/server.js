@@ -7,6 +7,12 @@ import { cpuTools } from './tools/cpu.tools.js';
 import { memoryTools } from './tools/memory.tools.js';
 import { gpuTools } from './tools/gpu.tools.js';
 import { diskTools } from './tools/disk.tools.js';
+import { networkTools } from './tools/network.tools.js';
+import { batteryTools } from './tools/battery.tools.js';
+import { thermalTools } from './tools/thermal.tools.js';
+import { processTools } from './tools/process.tools.js';
+import { historyTools } from './tools/history.tools.js';
+import { anomalyTools } from './tools/anomaly.tools.js';
 import { logger } from './utils/logger.js';
 // Combine all tool definitions
 const allTools = {
@@ -15,6 +21,12 @@ const allTools = {
     ...memoryTools,
     ...gpuTools,
     ...diskTools,
+    ...networkTools,
+    ...batteryTools,
+    ...thermalTools,
+    ...processTools,
+    ...historyTools,
+    ...anomalyTools,
 };
 export function createServer() {
     logger.info('Creating MCP server');

@@ -1,0 +1,1 @@
+{"version":3,"file":"detector.d.ts","sourceRoot":"","sources":["../../src/anomaly/detector.ts"],"names":[],"mappings":"AAAA;;GAEG;AAGH,OAAO,EAAE,YAAY,EAAE,MAAM,0BAA0B,CAAC;AAsCxD,wBAAsB,oBAAoB,IAAI,OAAO,CAAC,YAAY,EAAE,CAAC,CAkIpE;AAED,wBAAgB,eAAe,CAAC,KAAK,CAAC,EAAE,MAAM,GAAG,YAAY,EAAE,CAG9D;AAED,wBAAgB,iBAAiB,IAAI,IAAI,CAExC"}

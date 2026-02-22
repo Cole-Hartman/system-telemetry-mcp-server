@@ -65,6 +65,6 @@ export async function getProcessDetails(pid: number): Promise<ProcessDetails | n
     path: proc.path,
     parentPid: proc.parentPid,
     priority: proc.priority,
-    threads: proc.threads ?? 0,
+    threads: (proc as unknown as { threads?: number }).threads ?? 0,
   };
 }
